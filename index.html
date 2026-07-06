@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jdh8's arcade</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    /* Kitchen-table felt, card-paper panels, gold accents.
+       Same palette as pons + gin-rummy — no gradients, no gloss. */
+    :root {
+      --felt: #2c7a63;
+      --paper: #fdfdf7;
+      --ink: #222;
+      --gold: #f5c518;
+      /* Four-colour deck, poker convention — same as gin-rummy. */
+      --red: #c0392b;
+      --black: #1b1b1b;
+      --green: #1e7a45;
+      --blue: #1a74d9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 15px/1.4 system-ui, sans-serif;
+      color: #f2f2f2;
+      background: var(--felt);
+      min-height: 100vh;
+    }
+    header {
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    h1 { font-size: 1.2rem; margin: 0; }
+    header .tag { opacity: 0.85; font-size: 0.9rem; }
+
+    main { max-width: 60rem; margin: 0 auto; padding: 1rem; }
+    h2 { font-size: 1rem; font-weight: 600; margin: 0.5rem 0; opacity: 0.9; }
+
+    /* Games: cream card-paper tiles floating on the felt. */
+    .games {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .game {
+      display: block;
+      background: var(--paper);
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+      transition: transform 0.08s, border-color 0.08s, box-shadow 0.08s;
+    }
+    .game:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+    .game .name { font-size: 1.15rem; font-weight: 600; }
+    .game .suit { font-style: normal; }
+    .game .suit.red { color: var(--red); }
+    .game .suit.black { color: var(--black); }
+    .game .suit.green { color: var(--green); }
+    .game .suit.blue { color: var(--blue); }
+    .game .desc { font-size: 0.9rem; opacity: 0.75; margin-top: 0.2rem; }
+
+    /* Elsewhere: quiet transparent-outline pills on the felt. */
+    .elsewhere { margin-top: 1.5rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .links a {
+      font-size: 0.9rem;
+      padding: 0.2rem 0.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 5px;
+      color: inherit;
+      text-decoration: none;
+    }
+    .links a:hover { background: rgba(255, 255, 255, 0.12); }
+
+    @media (max-width: 40rem) {
+      .games { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>jdh8's arcade</h1>
+    <span class="tag">browser card games, built on GitHub Pages</span>
+  </header>
+  <main>
+    <section>
+      <h2>Games</h2>
+      <div class="games">
+        <a class="game" href="https://jdh8.github.io/pons/">
+          <div class="name"><span class="suit red">♥</span> Bridge</div>
+          <div class="desc">Bidding practice against the pons engine</div>
+        </a>
+        <a class="game" href="https://jdh8.github.io/gin-rummy-engine/">
+          <div class="name"><span class="suit green">♣</span> Gin Rummy</div>
+          <div class="desc">Play against the engine</div>
+        </a>
+        <a class="game" href="https://jdh8.github.io/poker-trainer/">
+          <div class="name"><span class="suit blue">♦</span> Poker</div>
+          <div class="desc">Poker trainer</div>
+        </a>
+        <a class="game" href="https://jdh8.github.io/blackjack-table/">
+          <div class="name"><span class="suit black">♠</span> Blackjack</div>
+          <div class="desc">Basic-strategy table</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="elsewhere">
+      <h2>Elsewhere</h2>
+      <div class="links">
+        <a href="https://jdh8.org">jdh8.org — blog 🌎</a>
+        <a href="https://jdh8.com">jdh8.com — blog 🇹🇼</a>
+        <a href="https://discord.com/application-directory/410315411695992833">Natsuki — Discord bot</a>
+        <a href="https://discord.gg/9N6tRxDJXp">Taipei Forcing Club</a>
+        <a href="https://jdh8.github.io/bridge-systems/">Bridge systems</a>
+        <a href="https://www.youtube.com/@jdh8">YouTube</a>
+        <a href="https://www.twitch.tv/jdh863">Twitch</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
