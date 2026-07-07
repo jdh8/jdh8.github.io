@@ -6,6 +6,14 @@
   <title>jdh8's arcade</title>
   <link rel="icon" href="favicon.ico">
   <style>
+    /* Subset of Source Han Sans JP for suits — see /fonts/SUITS-README.md.
+       Served from this origin and shared by all jdh8.github.io card sites. */
+    @font-face {
+      font-family: "Source Han Suits";
+      font-weight: 1 1000;
+      font-style: oblique -90deg 90deg;
+      src: url("/fonts/suits.woff2") format("woff2");
+    }
     /* Kitchen-table felt, card-paper panels, gold accents.
        Same palette as pons + gin-rummy — no gradients, no gloss. */
     :root {
@@ -22,7 +30,7 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font: 15px/1.4 system-ui, sans-serif;
+      font: 15px/1.4 "Source Han Suits", system-ui, sans-serif;
       color: #f2f2f2;
       background: var(--felt);
       min-height: 100vh;
