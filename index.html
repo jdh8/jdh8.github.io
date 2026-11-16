@@ -80,6 +80,18 @@
     .game .suit.black { color: var(--black); }
     .game .suit.green { color: var(--green); }
     .game .suit.blue { color: var(--blue); }
+    /* 四色牌: black piece on dyed stock, as in tsap-oo and its book. */
+    .game .card {
+      display: inline-block;
+      font-size: 0.8em;
+      line-height: 1.4;
+      padding: 0 0.2em;
+      border: 1px solid rgba(0, 0, 0, 0.35);
+      border-radius: 3px;
+      background: #f0c541;
+      color: #1b1b1b;
+      vertical-align: 0.1em;
+    }
     .game .desc { font-size: 0.9rem; opacity: 0.75; margin-top: 0.2rem; }
 
     /* Elsewhere: quiet transparent-outline pills on the felt. */
@@ -132,6 +144,10 @@
         <a class="game" href="https://jdh8.github.io/hearts-engine/">
           <div class="name"><span class="suit red">♥</span> Hearts</div>
           <div class="desc">Play with the engine</div>
+        </a>
+        <a class="game" href="https://jdh8.github.io/tsap-oo/" lang="zh-TW">
+          <div class="name"><span class="card">帥</span> 十胡</div>
+          <div class="desc">四色牌，與三家電腦對局</div>
         </a>
       </div>
     </section>
